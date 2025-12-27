@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vishwas Khattar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+  <div class="hero-text">
+    <h1>Vishwas Khattar</h1>
+
+    <p class="hero-main">
+      I work on full-stack systems and explore machine learning and
+      research-driven problems.
+    </p>
+
+    <p class="hero-sub">
+      Currently focused on building, learning, and refining my approach.
+    </p>
+
+    <div class="hero-actions">
+      <span class="action-label">Resume</span>
+      <a href="assets/resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">
+        View Resume
+      </a>
+    </div>
+  </div>
+
+  <!-- subtle presence image -->
+  <img
+    src="assets/IMG_2218.png"
+    alt="Vishwas Khattar"
+    class="hero-image"
+  />
+</section>
+
+
+  <div class="section-divider"></div>
+
+  <section class="explore-intro">
+  <h3>Things I find cool</h3>
+  <p>
+    Things I’m paying attention to lately.  
+    <span>Changes often.</span>
+  </p>
+</section>
+
+  <section class="explore">
+  <div class="explore-track">
+
+    <a href="#" class="explore-card">
+      <div class="note-card">
+  <h4>Notes</h4>
+  <p class="note-sub">Things I’m thinking about lately</p>
+
+  <p class="note-intro">
+    These are informal notes from things I’ve built, broken, or tried to understand.
+    Not tutorials. Not polished. Mostly reminders to myself.
+  </p>
+
+  <!-- <ul class="note-list">
+    <li>Building a full-stack project taught me more about systems than any isolated DSA problem.</li>
+    <li>Most bugs aren’t technical — they’re misunderstandings between components.</li>
+    <li>Shipping something small beats designing something perfect.</li>
+    <li>ML models are easy to train; making them usable is the hard part.</li>
+    <li>I’m learning to value clarity over cleverness in both code and design.</li>
+  </ul> -->
+  <ul class="note-list">
+  <li>Building a full-stack project taught me more about systems than any isolated DSA problem.</li>
+  <li>Most bugs aren’t technical — they’re misunderstandings between components.</li>
+  <li>Shipping something small beats designing something perfect.</li>
+
+  <div class="note-more">
+    <li>ML models are easy to train; making them usable is the hard part.</li>
+    <li>I’m learning to value clarity over cleverness in both code and design.</li>
+  </div>
+</ul>
+
+</div>
+
+
+    <a href="#" class="explore-card">
+     <div class="note-card">
+  <h4>Reading</h4>
+  <p class="note-sub">Articles and papers I find interesting</p>
+
+  <p class="note-intro">
+    Things I read to shape how I think about systems, machine learning,
+    and building products. Not a reading challenge or a complete list.
+  </p>
+
+  <ul class="note-list">
+    <li>Designing Data-Intensive Applications — revisiting chapters on trade-offs.</li>
+    <li>Writing about why simple systems scale better than clever ones.</li>
+    <li>Articles on why most ML projects fail in production.</li>
+
+    <div class="note-more">
+      <li>Writing about the gap between model accuracy and usability.</li>
+      <li>I read to refine how I approach problems, not to collect information.</li>
+    </div>
+  </ul>
+</div>
+
+
+    </a>
+
+    <a href="#" class="explore-card">
+      <div class="note-card">
+  <h4>GitHub</h4>
+  <p class="note-sub">Code, experiments, and side projects</p>
+
+  <p class="note-intro">
+    Most of what I build starts as an experiment. Some of it turns into
+    something useful. GitHub is where I work things out.
+  </p>
+
+  <ul class="note-list">
+    <li>Sahayak — a school assistance portal focused on real user needs.</li>
+    <li>Bird species classification — exploring audio-based ML systems.</li>
+    <li>Small backend utilities and full-stack experiments.</li>
+
+    <div class="note-more">
+      <li>I use GitHub as a workspace, not a gallery.</li>
+      <li>Some projects are unfinished by design.</li>
+    </div>
+  </ul>
+</div>
+
+    </a>
+
+  </div>
+</section>
+
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>About</h2>
+    <p>
+      I enjoy building complete systems rather than isolated features.
+      That usually means working across the stack and thinking about how
+      different parts of a system fit together.
+    </p>
+    <p>
+      I’m interested in full-stack development and machine learning,
+      especially where automation and real-world constraints matter.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+    <p id="status"></p>
+  </section>
+
+  <footer class="footer">
+  <p>Thanks for stopping by.</p>  
+  <p>© Vishwas Khattar</p>
+</footer>
+
+
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

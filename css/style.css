@@ -1,0 +1,533 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #9a9a9a;   /* SAME grey feel */
+  color: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 8rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 480px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* FIXED IMAGE ON RIGHT */
+.fixed-image {
+  position: fixed;
+  right: 6rem;
+  bottom: 0;
+  z-index: 1;           /* behind content */
+  pointer-events: none; /* avoids blocking scroll/clicks */
+}
+
+.fixed-image img {
+  height: 70vh;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  background: #ffffff;
+  color: #000;
+  text-decoration: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+  height: 420px;
+  object-fit: contain;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 4rem 2rem;
+}
+
+.section h2 {
+  margin-bottom: 1.2rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* CONTACT */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  font-size: 0.95rem;
+  border: none;
+}
+
+button.btn {
+  width: fit-content;
+}
+
+.navbar a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #111;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+.btn {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+}
+
+.section h2 {
+  transition: letter-spacing 0.2s ease;
+}
+
+input, textarea {
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+input:hover,
+textarea:hover {
+  background: #ededed;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  background: #e6e6e6;
+}
+
+.btn,
+button {
+  cursor: pointer;
+}
+
+.section {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.hero-sub {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* EXPLORE STRIP */
+.explore {
+  margin: 6rem 0;
+  padding-left: 6rem;
+}
+
+.explore-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.explore-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.explore-track::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+}
+
+/* CARDS */
+.explore-card {
+  min-width: 220px;
+  padding: 1.2rem;
+  background: rgba(255,255,255,0.15);
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.explore-card h4 {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.explore-card p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Hover (subtle) */
+.explore-card:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+
+/* Explore intro */
+.explore-intro {
+  margin: 6rem 0 2rem 6rem; /* aligns with cards */
+  max-width: 420px;
+}
+
+.explore-intro h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.explore-intro p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.explore-intro p span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Section divider */
+.section-divider {
+  width: 220px;
+  height: 1px;
+  background: rgba(33, 4, 4, 0.25);
+  margin: 5rem 0 2.5rem 6rem;
+}
+
+.section-divider {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+  background: #f2f2f2;
+}
+
+/* Remove default ugly focus */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Keyboard-only focus styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+
+.note-card {
+  max-width: 600px;
+}
+
+/* Title */
+.note-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Subtitle */
+.note-sub {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+/* Intro text */
+.note-intro {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Notes list */
+.note-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.note-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Minimal dot */
+.note-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+}
+.note-more {
+  margin-top: 0.8rem;
+  opacity: 0.5;
+}
+
+.reading-card {
+  max-width: 650px;
+  padding: 1.5rem 0;
+}
+
+/* Title */
+.reading-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Subtitle */
+.reading-sub {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+/* Intro */
+.reading-intro {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+  max-width: 520px;
+}
+
+/* Sections */
+.reading-section {
+  margin-bottom: 1.2rem;
+}
+
+.reading-section h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  opacity: 0.85;
+}
+
+/* Lists */
+.reading-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reading-section li {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.reading-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  opacity: 0.4;
+}
+
+/* Closing line */
+.reading-close {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+}
+.reading-section li {
+  opacity: 0.65;
+}
+
+.hero-image {
+  position: absolute;
+  right: 8%;
+  bottom: 0;
+  opacity: 0.25;
+  filter: grayscale(100%);
+  max-height: 70vh;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 6rem 8%;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Text content */
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  margin-top: 4rem;
+}
+
+/* Main description */
+.hero-main {
+  margin-top: 1rem;
+}
+
+/* Sub text */
+.hero-sub {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 0.8rem;
+}
+
+/* Resume section */
+.hero-actions {
+  margin-top: 1.8rem;
+}
+
+.action-label {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-bottom: 0.4rem;
+}
+
+/* Image styling */
+.hero-image {
+  position: absolute;
+  right: 8%;
+  bottom: 0;
+  max-height: 75vh;
+  opacity: 0.28;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+/* Soft fade so it blends */
+.hero-image {
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+  height: 85vh;          /* BIGGER */
+  max-height: 900px;
+  opacity: 0.28;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.hero-image {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+
+  height: 145vh;          /* <-- KEY CHANGE */
+  max-height: 980px;
+
+  opacity: 0.26;
+  filter: grayscale(100%);
+  pointer-events: none;
+  transform: translateY(-2rem);
+  margin-top: 3.5rem;
+
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(0,0,0,0.9) 30%,
+    black 100%
+  );
+}
+
+
+@media (max-width: 900px) {
+  .hero-image {
+    display: none;
+  }
+}
+@media (min-width: 1600px) {
+  .hero-image {
+    height: 85vh;
+  }
+}
+
+
+
+
+
