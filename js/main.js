@@ -63,3 +63,32 @@ if (divider) {
     divider.style.opacity = "0.6";
   });
 }
+
+document.querySelectorAll(".project-card").forEach(card => {
+  const liveBtn = card.querySelector(".live-btn");
+  const codeBtn = card.querySelector(".code-btn");
+
+  const liveLink = card.dataset.live;
+  const codeLink = codeBtn?.getAttribute("href");
+
+  // View Live logic
+  liveBtn.addEventListener("click", () => {
+    if (!liveLink || liveLink === "none") {
+      alert("This project hasn’t been deployed yet.");
+    } else {
+      window.open(liveLink, "_blank", "noopener");
+    }
+  });
+
+  // View Code logic
+  if (codeBtn) {
+    codeBtn.addEventListener("click", (e) => {
+      if (!codeLink || codeLink.trim() === "") {
+        e.preventDefault();
+        alert("Code not available at the moment.");
+      }
+    });
+  }
+});
+
+
