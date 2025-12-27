@@ -667,6 +667,45 @@ textarea:focus-visible {
 }
 
 
+@media (max-width: 768px) {
+
+  /* Disable overlay behavior */
+  .project-overlay {
+    position: static;
+    background: none;
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
+  /* Stack buttons nicely */
+  .project-btn {
+    color: inherit;
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .project-btn:hover {
+    background: none;
+    color: inherit;
+  }
+
+  /* Prevent hover transform jump */
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .project-overlay {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 0.8rem;
+  }
+}
+
+
 
 
 
