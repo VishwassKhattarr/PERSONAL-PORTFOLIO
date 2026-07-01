@@ -1,37 +1,3 @@
-// const form = document.getElementById("contact-form");
-// const statusText = document.getElementById("status");
-
-// const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbypNgTyDLI_laYMjkQui1S0eMz-d9Vkr12IqARzAoweVwatY2BlOFb6yq0BM47D0kNd/exec";
-
-// form.addEventListener("submit", async (e) => {
-//   e.preventDefault();
-
-//   statusText.textContent = "Sending...";
-//   statusText.style.opacity = "0.7";
-
-//   const formData = new FormData(form);
-
-//   try {
-//     await fetch(SCRIPT_URL, {
-//       method: "POST",
-//       body: formData
-//     });
-
-//     statusText.textContent = "Message sent successfully.";
-//     statusText.style.opacity = "1";
-//     form.reset();
-//   } catch (error) {
-//     statusText.textContent = "Something went wrong. Try again.";
-//     statusText.style.opacity = "1";
-//   }
-
-//   setTimeout(() => {
-//   statusText.style.opacity = "0";
-// }, 3000);
-
-// });
-
-
 const form = document.getElementById("contact-form");
 const statusText = document.getElementById("status");
 const button = form.querySelector("button"); // 👈 GET BUTTON ONCE

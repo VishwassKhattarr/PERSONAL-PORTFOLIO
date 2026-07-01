@@ -3,19 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vishwas Khattar</title>
+  <title>Vishwas Khattar — Software Developer</title>
+  <meta name="description" content="Vishwas Khattar — Computer Engineering student at TIET building backend and concurrent systems in C++, Node.js, and PostgreSQL. Projects in full-stack development and audio ML." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vishwas Khattar — Software Developer" />
+  <meta property="og:description" content="Backend and concurrent systems in C++, Node.js, and PostgreSQL. Projects in full-stack development and audio ML." />
+  <meta property="og:image" content="assets/IMG_2218.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Vishwas Khattar — Software Developer" />
+  <meta name="twitter:description" content="Backend and concurrent systems in C++, Node.js, and PostgreSQL. Projects in full-stack development and audio ML." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+  <a href="#home" class="skip-link">Skip to content</a>
+
   <!-- NAVBAR -->
   <header class="navbar">
-    <nav>
+    <nav id="site-nav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="projects.html">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button type="button" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <!-- HERO -->
@@ -135,14 +154,82 @@
   <section class="section" id="about">
     <h2>About</h2>
     <p>
-      I enjoy building complete systems rather than isolated features.
-      That usually means working across the stack and thinking about how
-      different parts of a system fit together.
+      I'm a Computer Engineering student at Thapar Institute of Engineering and
+      Technology (CGPA 8.64), currently in my final year. I enjoy building complete
+      systems rather than isolated features — that usually means working across
+      the stack and thinking about how different parts of a system fit together.
     </p>
     <p>
-      I’m interested in full-stack development and machine learning,
-      especially where automation and real-world constraints matter.
+      I've built a multithreaded C++ ETL pipeline that hit a 3.5× throughput gain
+      over a single-threaded baseline, shipped production backend features during
+      a live internship, and I'm first author on a research paper benchmarking
+      audio ML models on edge hardware, submitted to APSIPA ASC 2026.
+      I've also solved 250+ problems on LeetCode building up my DSA foundations.
     </p>
+    <p>
+      I'm interested in full-stack development and machine learning, especially
+      where automation and real-world constraints matter.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h5>Languages</h5>
+        <p>C, C++, Python, JavaScript, HTML/CSS</p>
+      </div>
+
+      <div class="skill-group">
+        <h5>Web &amp; Backend</h5>
+        <p>Node.js, Express.js, React.js, REST APIs, JWT Auth, EJS, PostgreSQL, SQL</p>
+      </div>
+
+      <div class="skill-group">
+        <h5>Tools</h5>
+        <p>Git/GitHub, Postman, VS Code, Google Earth Engine, GitHub Actions, Docker</p>
+      </div>
+
+      <div class="skill-group">
+        <h5>AI/ML</h5>
+        <p>Librosa, NumPy, Pandas, Matplotlib, Scikit-learn, PyTorch, EfficientNet, CNN, OCR, n8n</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <h4>Undergraduate Researcher — Edge AI &amp; Audio ML</h4>
+        <span class="experience-date">Ongoing</span>
+      </div>
+      <p class="experience-org">Thapar Institute of Engineering and Technology</p>
+      <p>
+        Authoring a research paper benchmarking audio ML models (MobileNetV2,
+        EfficientNet-B1) deployed on Raspberry Pi 4B in low-resource forest
+        environments; evaluating inference latency, accuracy, and power
+        trade-offs across TFLite quantization formats (float32, float16, int8).
+      </p>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <h4>Backend Developer Intern — NextRound AI</h4>
+        <span class="experience-date">Jun 2025 – Aug 2025</span>
+      </div>
+      <p>
+        Built backend infrastructure for an AI-powered UPSC prep platform:
+        RESTful APIs, JWT authentication, and PostgreSQL operations using Node.js.
+        Implemented content management and user progress tracking modules;
+        optimized queries and collaborated with frontend to deliver
+        end-to-end functionality.
+      </p>
+    </div>
   </section>
 
   <!-- CONTACT -->

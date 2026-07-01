@@ -14,12 +14,29 @@ body {
   color: #ffffff;
 }
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
+/* SKIP LINK */
+.skip-link {
+  position: absolute;
+  left: -999px;
   top: 0;
-  left: 0;
-  width: 100%;
+  background: #fff;
+  color: #111;
+  padding: 0.8rem 1.2rem;
+  z-index: 2000;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* NAVBAR — flex container for links + toggle */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1.5rem 3rem;
 }
 
@@ -28,10 +45,122 @@ body {
   gap: 1.5rem;
 }
 
-.navbar a {
-  color: #111;
-  text-decoration: none;
-  font-size: 0.95rem;
+/* HAMBURGER TOGGLE (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: #e8e8e8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .navbar nav.open {
+    max-height: 320px;
+  }
+
+  .navbar nav a {
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skill-group h5 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+  margin-bottom: 0.4rem;
+}
+
+.skill-group p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* EXPERIENCE */
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.experience-header h4 {
+  font-size: 1rem;
+}
+
+.experience-date {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.experience-org {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
 }
 
 /* HERO */

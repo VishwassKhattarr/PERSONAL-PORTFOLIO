@@ -64,6 +64,26 @@ if (divider) {
   });
 }
 
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.getElementById("site-nav");
+
+if (navToggle && siteNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    navToggle.classList.toggle("open", isOpen);
+    navToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  siteNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+
 document.querySelectorAll(".note-toggle").forEach(btn => {
   btn.addEventListener("click", () => {
     const list = btn.closest(".note-card").querySelector(".note-list");
