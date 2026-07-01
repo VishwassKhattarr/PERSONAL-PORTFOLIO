@@ -64,6 +64,16 @@ if (divider) {
   });
 }
 
+document.querySelectorAll(".note-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const list = btn.closest(".note-card").querySelector(".note-list");
+    const isExpanded = list.classList.toggle("expanded");
+    btn.textContent = isExpanded ? "Show less" : "Show more";
+    btn.setAttribute("aria-expanded", isExpanded);
+  });
+});
+
+
 document.querySelectorAll(".project-card").forEach(card => {
   const liveBtn = card.querySelector(".live-btn");
   const codeBtn = card.querySelector(".code-btn");
@@ -90,5 +100,3 @@ document.querySelectorAll(".project-card").forEach(card => {
     });
   }
 });
-
-

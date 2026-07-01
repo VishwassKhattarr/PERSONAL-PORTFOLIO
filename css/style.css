@@ -345,9 +345,60 @@ textarea:focus-visible {
   left: 0;
   opacity: 0.6;
 }
-.note-more {
-  margin-top: 0.8rem;
-  opacity: 0.5;
+.note-extra {
+  display: none;
+}
+
+.note-list.expanded .note-extra {
+  display: block;
+  animation: note-fade-in 0.25s ease;
+}
+
+@keyframes note-fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 0.85; transform: translateY(0); }
+}
+
+.note-toggle {
+  margin-top: 0.4rem;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #fff;
+  font-size: 0.8rem;
+  opacity: 0.65;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.note-toggle:hover {
+  opacity: 1;
+}
+
+.note-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+}
+
+.note-card-footer .note-toggle {
+  margin-top: 0;
+}
+
+.note-link {
+  font-size: 0.8rem;
+  color: #fff;
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.note-link:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .reading-card {
@@ -704,9 +755,3 @@ textarea:focus-visible {
     padding-top: 0.8rem;
   }
 }
-
-
-
-
-
-
