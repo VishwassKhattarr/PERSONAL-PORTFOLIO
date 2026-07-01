@@ -42,7 +42,7 @@
           <button class="project-btn live-btn">View Live</button>
 
           <a
-            href="https://github.com/VishwassKhattarr/PowerRangers_Sahayak_Code"
+            href="https://power-rangers-sahayak-code.vercel.app/"
             target="_blank"
             class="project-btn code-btn"
           >
@@ -54,10 +54,12 @@
       <!-- PROJECT 2 -->
       <div class="project-card" data-live="none">
         <div class="project-content">
-          <h3>Bird Species Classification</h3>
+          <h3>Edge AI Bird Species Classification </h3>
           <p>
-            Audio-based ML system exploring real-world data
-            and the gap between models and usability.
+            Built a real-time edge AI system for bird species recognition using audio classification. Designed a four-stage inference
+pipeline with frequency-domain filtering, lightweight CNN-based detection, feature-extraction using librosa and multi-
+label classification. Achieved F1 score of 0.79 across 150+ species; reduced unnecessary inference by ∼60% via audio
+energy gating. Benchmarked TFLite quantization formats (float32, float16, int8) for on-device deployment
           </p>
         </div>
 
@@ -65,7 +67,7 @@
           <button class="project-btn live-btn">View Live</button>
 
           <a
-            href="https://github.com/VishwassKhattarr/bird-classification-using-audio/blob/main/mlproject.ipynb"
+            href="https://github.com/VishwassKhattarr/birds_species_recognition"
             target="_blank"
             class="project-btn code-btn"
           >
@@ -76,6 +78,55 @@
 
     </div>
   </section>
+
+  <!-- PROJECT 3 -->
+  <div class="project-card" data-live="none">
+        <div class="project-content">
+          <h3>Concurrent-etl</h3>
+          <p>
+            Multithreaded C++17 pipeline that extracts, transforms, and loads
+      1000+ rows from a cloud Postgres database using a producer–transformer–loader
+      architecture with mutex-coordinated thread-safe queues. Benchmarked across
+      15 thread × batch-size combinations. Wrapped with a Node.js API and
+      React analytics dashboard.
+          </p>
+        </div>
+
+        <div class="project-overlay">
+          <button class="project-btn live-btn">View Live</button>
+
+          <a
+            href="https://parallel-etl.vercel.app/"
+            target="_blank"
+            class="project-btn code-btn"
+          >
+            View Code
+          </a>
+        </div>
+      </div>
+
+
+<!-- PROJECT -4  -->
+       <div class="project-card" data-live="none">
+        <div class="project-content">
+          <h3>FRA-Atlas</h3>
+          <p>
+           Civic-tech platform to digitise Forest Rights Act documents and verify tribal land claims via OCR (text in Indian languages) and geospatial analysis. Processed 85+ legal documents across Chhattisgarh and Jharkhand (91% ocr accuracy); mapped claims against 17 government welfare schemes using Google Earth Engine spatial eligibility workflows.
+          </p>
+        </div>
+
+        <div class="project-overlay">
+          <button class="project-btn live-btn">View Live</button>
+
+          <a
+            href="https://parallel-etl.vercel.app/"
+            target="_blank"
+            class="project-btn code-btn"
+          >
+            View Code
+          </a>
+        </div>
+      </div>
 
   <!-- SCRIPT -->
   <script src="js/main.js"></script>
