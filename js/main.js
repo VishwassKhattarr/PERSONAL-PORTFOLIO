@@ -97,18 +97,13 @@ document.querySelectorAll(".note-toggle").forEach(btn => {
 document.querySelectorAll(".project-card").forEach(card => {
   const liveBtn = card.querySelector(".live-btn");
   const codeBtn = card.querySelector(".code-btn");
-
-  const liveLink = card.dataset.live;
   const codeLink = codeBtn?.getAttribute("href");
 
-  // View Live logic
-  if (liveBtn) {
+  // Real <a href> live links just work natively — only intercept when
+  // it's a plain <button> with nowhere to go.
+  if (liveBtn && liveBtn.tagName === "BUTTON") {
     liveBtn.addEventListener("click", () => {
-      if (!liveLink || liveLink === "none") {
-        alert("This project hasn’t been deployed yet.");
-      } else {
-        window.open(liveLink, "_blank", "noopener");
-      }
+      alert("This project hasn’t been deployed yet.");
     });
   }
 
