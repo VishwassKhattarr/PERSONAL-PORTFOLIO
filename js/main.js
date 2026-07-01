@@ -102,13 +102,15 @@ document.querySelectorAll(".project-card").forEach(card => {
   const codeLink = codeBtn?.getAttribute("href");
 
   // View Live logic
-  liveBtn.addEventListener("click", () => {
-    if (!liveLink || liveLink === "none") {
-      alert("This project hasn’t been deployed yet.");
-    } else {
-      window.open(liveLink, "_blank", "noopener");
-    }
-  });
+  if (liveBtn) {
+    liveBtn.addEventListener("click", () => {
+      if (!liveLink || liveLink === "none") {
+        alert("This project hasn’t been deployed yet.");
+      } else {
+        window.open(liveLink, "_blank", "noopener");
+      }
+    });
+  }
 
   // View Code logic
   if (codeBtn) {
